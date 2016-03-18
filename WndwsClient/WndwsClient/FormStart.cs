@@ -41,19 +41,29 @@ namespace WndwsClient
         {
             ConnectClass.UseType = 0;
             ConnectClass.checkLogin(textBoxUsername.Text, textBoxPassword.Text);
+            ConnectClass.GetUserID(textBoxUsername.Text);
             ConnectClass.GetUserType(textBoxUsername.Text);
-            if (ConnectClass.Access == true)
+            if (textBoxUsername.Text != string.Empty || textBoxPassword.Text != string.Empty)
             {
-                System.Threading.Thread t1 = new System.Threading.Thread(new System.Threading.ThreadStart(ThreadProc2));
-                t1.Start();
-                this.Close();
+                if (ConnectClass.Access == true)
+                {
+                    System.Threading.Thread t1 = new System.Threading.Thread(new System.Threading.ThreadStart(ThreadProc2));
+                    t1.Start();
+                    this.Close();
+                }
+                else
+                {
+                    textBoxUsername.Text = string.Empty;
+                    textBoxPassword.Text = string.Empty;
+                    MessageBox.Show("Logon info is incorrect", "Error", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                }
             }
-            else
-            {
-                textBoxUsername.Text = string.Empty;
-                textBoxPassword.Text = string.Empty;
-                MessageBox.Show("Logon info is incorrect", "Error", MessageBoxButtons.OK, MessageBoxIcon.Stop);
-            }
+        }
+
+        private void buttonForgot_Click(object sender, EventArgs e)
+        {
+            FormPasswordRecovery pr = new FormPasswordRecovery();
+            pr.Show();
         }
     }
 }

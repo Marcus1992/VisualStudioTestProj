@@ -41,6 +41,8 @@
             this.buttonCreate = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.buttonBack = new System.Windows.Forms.Button();
+            this.textBoxEmail = new System.Windows.Forms.TextBox();
+            this.labelEmail = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // labelName
@@ -94,7 +96,7 @@
             // labelCountry
             // 
             this.labelCountry.AutoSize = true;
-            this.labelCountry.Location = new System.Drawing.Point(22, 107);
+            this.labelCountry.Location = new System.Drawing.Point(22, 118);
             this.labelCountry.Name = "labelCountry";
             this.labelCountry.Size = new System.Drawing.Size(43, 13);
             this.labelCountry.TabIndex = 6;
@@ -103,7 +105,7 @@
             // labelPhone
             // 
             this.labelPhone.AutoSize = true;
-            this.labelPhone.Location = new System.Drawing.Point(179, 107);
+            this.labelPhone.Location = new System.Drawing.Point(179, 118);
             this.labelPhone.Name = "labelPhone";
             this.labelPhone.Size = new System.Drawing.Size(41, 13);
             this.labelPhone.TabIndex = 7;
@@ -111,21 +113,21 @@
             // 
             // textBoxCountry
             // 
-            this.textBoxCountry.Location = new System.Drawing.Point(25, 123);
+            this.textBoxCountry.Location = new System.Drawing.Point(25, 134);
             this.textBoxCountry.Name = "textBoxCountry";
             this.textBoxCountry.Size = new System.Drawing.Size(98, 20);
             this.textBoxCountry.TabIndex = 8;
             // 
             // textBoxPhone
             // 
-            this.textBoxPhone.Location = new System.Drawing.Point(182, 123);
+            this.textBoxPhone.Location = new System.Drawing.Point(182, 134);
             this.textBoxPhone.Name = "textBoxPhone";
             this.textBoxPhone.Size = new System.Drawing.Size(101, 20);
             this.textBoxPhone.TabIndex = 9;
             // 
             // buttonCreate
             // 
-            this.buttonCreate.Location = new System.Drawing.Point(25, 158);
+            this.buttonCreate.Location = new System.Drawing.Point(25, 169);
             this.buttonCreate.Name = "buttonCreate";
             this.buttonCreate.Size = new System.Drawing.Size(98, 24);
             this.buttonCreate.TabIndex = 10;
@@ -144,7 +146,7 @@
             // 
             // buttonBack
             // 
-            this.buttonBack.Location = new System.Drawing.Point(245, 159);
+            this.buttonBack.Location = new System.Drawing.Point(376, 169);
             this.buttonBack.Name = "buttonBack";
             this.buttonBack.Size = new System.Drawing.Size(75, 23);
             this.buttonBack.TabIndex = 12;
@@ -152,11 +154,29 @@
             this.buttonBack.UseVisualStyleBackColor = true;
             this.buttonBack.Click += new System.EventHandler(this.buttonBack_Click);
             // 
+            // textBoxEmail
+            // 
+            this.textBoxEmail.Location = new System.Drawing.Point(336, 84);
+            this.textBoxEmail.Name = "textBoxEmail";
+            this.textBoxEmail.Size = new System.Drawing.Size(115, 20);
+            this.textBoxEmail.TabIndex = 13;
+            // 
+            // labelEmail
+            // 
+            this.labelEmail.AutoSize = true;
+            this.labelEmail.Location = new System.Drawing.Point(333, 68);
+            this.labelEmail.Name = "labelEmail";
+            this.labelEmail.Size = new System.Drawing.Size(32, 13);
+            this.labelEmail.TabIndex = 14;
+            this.labelEmail.Text = "Email";
+            // 
             // FormCreate
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(351, 204);
+            this.ClientSize = new System.Drawing.Size(483, 215);
+            this.Controls.Add(this.labelEmail);
+            this.Controls.Add(this.textBoxEmail);
             this.Controls.Add(this.buttonBack);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonCreate);
@@ -193,5 +213,7 @@
         private System.Windows.Forms.Button buttonCreate;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button buttonBack;
+        private System.Windows.Forms.TextBox textBoxEmail;
+        private System.Windows.Forms.Label labelEmail;
     }
 }

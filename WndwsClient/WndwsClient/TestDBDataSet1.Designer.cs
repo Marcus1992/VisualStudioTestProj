@@ -20,17 +20,17 @@ namespace WndwsClient {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("ExamDBDataSet")]
+    [global::System.Xml.Serialization.XmlRootAttribute("TestDBDataSet1")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class ExamDBDataSet : global::System.Data.DataSet {
+    public partial class TestDBDataSet1 : global::System.Data.DataSet {
         
-        private spGetFullMessageDataTable tablespGetFullMessage;
+        private tbl_MessageDataTable tabletbl_Message;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public ExamDBDataSet() {
+        public TestDBDataSet1() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace WndwsClient {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        protected ExamDBDataSet(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected TestDBDataSet1(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -54,8 +54,8 @@ namespace WndwsClient {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["spGetFullMessage"] != null)) {
-                    base.Tables.Add(new spGetFullMessageDataTable(ds.Tables["spGetFullMessage"]));
+                if ((ds.Tables["tbl_Message"] != null)) {
+                    base.Tables.Add(new tbl_MessageDataTable(ds.Tables["tbl_Message"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -79,9 +79,9 @@ namespace WndwsClient {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public spGetFullMessageDataTable spGetFullMessage {
+        public tbl_MessageDataTable tbl_Message {
             get {
-                return this.tablespGetFullMessage;
+                return this.tabletbl_Message;
             }
         }
         
@@ -127,7 +127,7 @@ namespace WndwsClient {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            ExamDBDataSet cln = ((ExamDBDataSet)(base.Clone()));
+            TestDBDataSet1 cln = ((TestDBDataSet1)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -152,8 +152,8 @@ namespace WndwsClient {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["spGetFullMessage"] != null)) {
-                    base.Tables.Add(new spGetFullMessageDataTable(ds.Tables["spGetFullMessage"]));
+                if ((ds.Tables["tbl_Message"] != null)) {
+                    base.Tables.Add(new tbl_MessageDataTable(ds.Tables["tbl_Message"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -188,10 +188,10 @@ namespace WndwsClient {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tablespGetFullMessage = ((spGetFullMessageDataTable)(base.Tables["spGetFullMessage"]));
+            this.tabletbl_Message = ((tbl_MessageDataTable)(base.Tables["tbl_Message"]));
             if ((initTable == true)) {
-                if ((this.tablespGetFullMessage != null)) {
-                    this.tablespGetFullMessage.InitVars();
+                if ((this.tabletbl_Message != null)) {
+                    this.tabletbl_Message.InitVars();
                 }
             }
         }
@@ -199,18 +199,18 @@ namespace WndwsClient {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "ExamDBDataSet";
+            this.DataSetName = "TestDBDataSet1";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/ExamDBDataSet.xsd";
+            this.Namespace = "http://tempuri.org/TestDBDataSet1.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tablespGetFullMessage = new spGetFullMessageDataTable();
-            base.Tables.Add(this.tablespGetFullMessage);
+            this.tabletbl_Message = new tbl_MessageDataTable();
+            base.Tables.Add(this.tabletbl_Message);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private bool ShouldSerializespGetFullMessage() {
+        private bool ShouldSerializetbl_Message() {
             return false;
         }
         
@@ -225,7 +225,7 @@ namespace WndwsClient {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            ExamDBDataSet ds = new ExamDBDataSet();
+            TestDBDataSet1 ds = new TestDBDataSet1();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -270,16 +270,16 @@ namespace WndwsClient {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public delegate void spGetFullMessageRowChangeEventHandler(object sender, spGetFullMessageRowChangeEvent e);
+        public delegate void tbl_MessageRowChangeEventHandler(object sender, tbl_MessageRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class spGetFullMessageDataTable : global::System.Data.TypedTableBase<spGetFullMessageRow> {
+        public partial class tbl_MessageDataTable : global::System.Data.TypedTableBase<tbl_MessageRow> {
             
-            private global::System.Data.DataColumn columnUsername;
+            private global::System.Data.DataColumn columnMessageID;
             
             private global::System.Data.DataColumn columnHeadline;
             
@@ -287,10 +287,12 @@ namespace WndwsClient {
             
             private global::System.Data.DataColumn columnMessageCreated;
             
+            private global::System.Data.DataColumn columnUserID;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public spGetFullMessageDataTable() {
-                this.TableName = "spGetFullMessage";
+            public tbl_MessageDataTable() {
+                this.TableName = "tbl_Message";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -298,7 +300,7 @@ namespace WndwsClient {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal spGetFullMessageDataTable(global::System.Data.DataTable table) {
+            internal tbl_MessageDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -315,16 +317,16 @@ namespace WndwsClient {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected spGetFullMessageDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected tbl_MessageDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn UsernameColumn {
+            public global::System.Data.DataColumn MessageIDColumn {
                 get {
-                    return this.columnUsername;
+                    return this.columnMessageID;
                 }
             }
             
@@ -354,6 +356,14 @@ namespace WndwsClient {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn UserIDColumn {
+                get {
+                    return this.columnUserID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -363,48 +373,56 @@ namespace WndwsClient {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public spGetFullMessageRow this[int index] {
+            public tbl_MessageRow this[int index] {
                 get {
-                    return ((spGetFullMessageRow)(this.Rows[index]));
+                    return ((tbl_MessageRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event spGetFullMessageRowChangeEventHandler spGetFullMessageRowChanging;
+            public event tbl_MessageRowChangeEventHandler tbl_MessageRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event spGetFullMessageRowChangeEventHandler spGetFullMessageRowChanged;
+            public event tbl_MessageRowChangeEventHandler tbl_MessageRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event spGetFullMessageRowChangeEventHandler spGetFullMessageRowDeleting;
+            public event tbl_MessageRowChangeEventHandler tbl_MessageRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event spGetFullMessageRowChangeEventHandler spGetFullMessageRowDeleted;
+            public event tbl_MessageRowChangeEventHandler tbl_MessageRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void AddspGetFullMessageRow(spGetFullMessageRow row) {
+            public void Addtbl_MessageRow(tbl_MessageRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public spGetFullMessageRow AddspGetFullMessageRow(string Username, string Headline, string Message, System.DateTime MessageCreated) {
-                spGetFullMessageRow rowspGetFullMessageRow = ((spGetFullMessageRow)(this.NewRow()));
+            public tbl_MessageRow Addtbl_MessageRow(string Headline, string Message, System.DateTime MessageCreated, int UserID) {
+                tbl_MessageRow rowtbl_MessageRow = ((tbl_MessageRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        Username,
+                        null,
                         Headline,
                         Message,
-                        MessageCreated};
-                rowspGetFullMessageRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowspGetFullMessageRow);
-                return rowspGetFullMessageRow;
+                        MessageCreated,
+                        UserID};
+                rowtbl_MessageRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowtbl_MessageRow);
+                return rowtbl_MessageRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public tbl_MessageRow FindByMessageID(int MessageID) {
+                return ((tbl_MessageRow)(this.Rows.Find(new object[] {
+                            MessageID})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                spGetFullMessageDataTable cln = ((spGetFullMessageDataTable)(base.Clone()));
+                tbl_MessageDataTable cln = ((tbl_MessageDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -412,31 +430,41 @@ namespace WndwsClient {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new spGetFullMessageDataTable();
+                return new tbl_MessageDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             internal void InitVars() {
-                this.columnUsername = base.Columns["Username"];
+                this.columnMessageID = base.Columns["MessageID"];
                 this.columnHeadline = base.Columns["Headline"];
                 this.columnMessage = base.Columns["Message"];
                 this.columnMessageCreated = base.Columns["MessageCreated"];
+                this.columnUserID = base.Columns["UserID"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             private void InitClass() {
-                this.columnUsername = new global::System.Data.DataColumn("Username", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnUsername);
+                this.columnMessageID = new global::System.Data.DataColumn("MessageID", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnMessageID);
                 this.columnHeadline = new global::System.Data.DataColumn("Headline", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnHeadline);
                 this.columnMessage = new global::System.Data.DataColumn("Message", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnMessage);
                 this.columnMessageCreated = new global::System.Data.DataColumn("MessageCreated", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnMessageCreated);
-                this.columnUsername.AllowDBNull = false;
-                this.columnUsername.MaxLength = 64;
+                this.columnUserID = new global::System.Data.DataColumn("UserID", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnUserID);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnMessageID}, true));
+                this.columnMessageID.AutoIncrement = true;
+                this.columnMessageID.AutoIncrementSeed = -1;
+                this.columnMessageID.AutoIncrementStep = -1;
+                this.columnMessageID.AllowDBNull = false;
+                this.columnMessageID.ReadOnly = true;
+                this.columnMessageID.Unique = true;
+                this.columnHeadline.AllowDBNull = false;
                 this.columnHeadline.MaxLength = 50;
                 this.columnMessage.AllowDBNull = false;
                 this.columnMessage.MaxLength = 250;
@@ -445,28 +473,28 @@ namespace WndwsClient {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public spGetFullMessageRow NewspGetFullMessageRow() {
-                return ((spGetFullMessageRow)(this.NewRow()));
+            public tbl_MessageRow Newtbl_MessageRow() {
+                return ((tbl_MessageRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new spGetFullMessageRow(builder);
+                return new tbl_MessageRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(spGetFullMessageRow);
+                return typeof(tbl_MessageRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.spGetFullMessageRowChanged != null)) {
-                    this.spGetFullMessageRowChanged(this, new spGetFullMessageRowChangeEvent(((spGetFullMessageRow)(e.Row)), e.Action));
+                if ((this.tbl_MessageRowChanged != null)) {
+                    this.tbl_MessageRowChanged(this, new tbl_MessageRowChangeEvent(((tbl_MessageRow)(e.Row)), e.Action));
                 }
             }
             
@@ -474,8 +502,8 @@ namespace WndwsClient {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.spGetFullMessageRowChanging != null)) {
-                    this.spGetFullMessageRowChanging(this, new spGetFullMessageRowChangeEvent(((spGetFullMessageRow)(e.Row)), e.Action));
+                if ((this.tbl_MessageRowChanging != null)) {
+                    this.tbl_MessageRowChanging(this, new tbl_MessageRowChangeEvent(((tbl_MessageRow)(e.Row)), e.Action));
                 }
             }
             
@@ -483,8 +511,8 @@ namespace WndwsClient {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.spGetFullMessageRowDeleted != null)) {
-                    this.spGetFullMessageRowDeleted(this, new spGetFullMessageRowChangeEvent(((spGetFullMessageRow)(e.Row)), e.Action));
+                if ((this.tbl_MessageRowDeleted != null)) {
+                    this.tbl_MessageRowDeleted(this, new tbl_MessageRowChangeEvent(((tbl_MessageRow)(e.Row)), e.Action));
                 }
             }
             
@@ -492,14 +520,14 @@ namespace WndwsClient {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.spGetFullMessageRowDeleting != null)) {
-                    this.spGetFullMessageRowDeleting(this, new spGetFullMessageRowChangeEvent(((spGetFullMessageRow)(e.Row)), e.Action));
+                if ((this.tbl_MessageRowDeleting != null)) {
+                    this.tbl_MessageRowDeleting(this, new tbl_MessageRowChangeEvent(((tbl_MessageRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void RemovespGetFullMessageRow(spGetFullMessageRow row) {
+            public void Removetbl_MessageRow(tbl_MessageRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -508,7 +536,7 @@ namespace WndwsClient {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                ExamDBDataSet ds = new ExamDBDataSet();
+                TestDBDataSet1 ds = new TestDBDataSet1();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -526,7 +554,7 @@ namespace WndwsClient {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "spGetFullMessageDataTable";
+                attribute2.FixedValue = "tbl_MessageDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -570,25 +598,25 @@ namespace WndwsClient {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class spGetFullMessageRow : global::System.Data.DataRow {
+        public partial class tbl_MessageRow : global::System.Data.DataRow {
             
-            private spGetFullMessageDataTable tablespGetFullMessage;
+            private tbl_MessageDataTable tabletbl_Message;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal spGetFullMessageRow(global::System.Data.DataRowBuilder rb) : 
+            internal tbl_MessageRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tablespGetFullMessage = ((spGetFullMessageDataTable)(this.Table));
+                this.tabletbl_Message = ((tbl_MessageDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string Username {
+            public int MessageID {
                 get {
-                    return ((string)(this[this.tablespGetFullMessage.UsernameColumn]));
+                    return ((int)(this[this.tabletbl_Message.MessageIDColumn]));
                 }
                 set {
-                    this[this.tablespGetFullMessage.UsernameColumn] = value;
+                    this[this.tabletbl_Message.MessageIDColumn] = value;
                 }
             }
             
@@ -596,15 +624,10 @@ namespace WndwsClient {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public string Headline {
                 get {
-                    try {
-                        return ((string)(this[this.tablespGetFullMessage.HeadlineColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Headline\' in table \'spGetFullMessage\' is DBNull.", e);
-                    }
+                    return ((string)(this[this.tabletbl_Message.HeadlineColumn]));
                 }
                 set {
-                    this[this.tablespGetFullMessage.HeadlineColumn] = value;
+                    this[this.tabletbl_Message.HeadlineColumn] = value;
                 }
             }
             
@@ -612,10 +635,10 @@ namespace WndwsClient {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public string Message {
                 get {
-                    return ((string)(this[this.tablespGetFullMessage.MessageColumn]));
+                    return ((string)(this[this.tabletbl_Message.MessageColumn]));
                 }
                 set {
-                    this[this.tablespGetFullMessage.MessageColumn] = value;
+                    this[this.tabletbl_Message.MessageColumn] = value;
                 }
             }
             
@@ -623,23 +646,39 @@ namespace WndwsClient {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public System.DateTime MessageCreated {
                 get {
-                    return ((global::System.DateTime)(this[this.tablespGetFullMessage.MessageCreatedColumn]));
+                    return ((global::System.DateTime)(this[this.tabletbl_Message.MessageCreatedColumn]));
                 }
                 set {
-                    this[this.tablespGetFullMessage.MessageCreatedColumn] = value;
+                    this[this.tabletbl_Message.MessageCreatedColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsHeadlineNull() {
-                return this.IsNull(this.tablespGetFullMessage.HeadlineColumn);
+            public int UserID {
+                get {
+                    try {
+                        return ((int)(this[this.tabletbl_Message.UserIDColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'UserID\' in table \'tbl_Message\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tabletbl_Message.UserIDColumn] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetHeadlineNull() {
-                this[this.tablespGetFullMessage.HeadlineColumn] = global::System.Convert.DBNull;
+            public bool IsUserIDNull() {
+                return this.IsNull(this.tabletbl_Message.UserIDColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetUserIDNull() {
+                this[this.tabletbl_Message.UserIDColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -647,22 +686,22 @@ namespace WndwsClient {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public class spGetFullMessageRowChangeEvent : global::System.EventArgs {
+        public class tbl_MessageRowChangeEvent : global::System.EventArgs {
             
-            private spGetFullMessageRow eventRow;
+            private tbl_MessageRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public spGetFullMessageRowChangeEvent(spGetFullMessageRow row, global::System.Data.DataRowAction action) {
+            public tbl_MessageRowChangeEvent(tbl_MessageRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public spGetFullMessageRow Row {
+            public tbl_MessageRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -678,7 +717,7 @@ namespace WndwsClient {
         }
     }
 }
-namespace WndwsClient.ExamDBDataSetTableAdapters {
+namespace WndwsClient.TestDBDataSet1TableAdapters {
     
     
     /// <summary>
@@ -690,7 +729,7 @@ namespace WndwsClient.ExamDBDataSetTableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class spGetFullMessageTableAdapter : global::System.ComponentModel.Component {
+    public partial class tbl_MessageTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -704,7 +743,7 @@ namespace WndwsClient.ExamDBDataSetTableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public spGetFullMessageTableAdapter() {
+        public tbl_MessageTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -801,19 +840,57 @@ namespace WndwsClient.ExamDBDataSetTableAdapters {
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "spGetFullMessage";
-            tableMapping.ColumnMappings.Add("Username", "Username");
+            tableMapping.DataSetTable = "tbl_Message";
+            tableMapping.ColumnMappings.Add("MessageID", "MessageID");
             tableMapping.ColumnMappings.Add("Headline", "Headline");
             tableMapping.ColumnMappings.Add("Message", "Message");
             tableMapping.ColumnMappings.Add("MessageCreated", "MessageCreated");
+            tableMapping.ColumnMappings.Add("UserID", "UserID");
             this._adapter.TableMappings.Add(tableMapping);
+            this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.DeleteCommand.Connection = this.Connection;
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[tbl_Message] WHERE (([MessageID] = @Original_MessageID) AND ([Headline] = @Original_Headline) AND ([Message] = @Original_Message) AND ([MessageCreated] = @Original_MessageCreated) AND ((@IsNull_UserID = 1 AND [UserID] IS NULL) OR ([UserID] = @Original_UserID)))";
+            this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_MessageID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MessageID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Headline", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Headline", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Message", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Message", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_MessageCreated", global::System.Data.SqlDbType.SmallDateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MessageCreated", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_UserID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "UserID", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_UserID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "UserID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.InsertCommand.Connection = this.Connection;
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[tbl_Message] ([Headline], [Message], [MessageCreated], [UserID" +
+                "]) VALUES (@Headline, @Message, @MessageCreated, @UserID);\r\nSELECT MessageID, He" +
+                "adline, Message, MessageCreated, UserID FROM tbl_Message WHERE (MessageID = SCOP" +
+                "E_IDENTITY())";
+            this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Headline", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Headline", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Message", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Message", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MessageCreated", global::System.Data.SqlDbType.SmallDateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MessageCreated", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@UserID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "UserID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.UpdateCommand.Connection = this.Connection;
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[tbl_Message] SET [Headline] = @Headline, [Message] = @Message, [MessageCreated] = @MessageCreated, [UserID] = @UserID WHERE (([MessageID] = @Original_MessageID) AND ([Headline] = @Original_Headline) AND ([Message] = @Original_Message) AND ([MessageCreated] = @Original_MessageCreated) AND ((@IsNull_UserID = 1 AND [UserID] IS NULL) OR ([UserID] = @Original_UserID)));
+SELECT MessageID, Headline, Message, MessageCreated, UserID FROM tbl_Message WHERE (MessageID = @MessageID)";
+            this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Headline", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Headline", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Message", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Message", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MessageCreated", global::System.Data.SqlDbType.SmallDateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MessageCreated", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@UserID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "UserID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_MessageID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MessageID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Headline", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Headline", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Message", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Message", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_MessageCreated", global::System.Data.SqlDbType.SmallDateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MessageCreated", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_UserID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "UserID", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_UserID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "UserID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MessageID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "MessageID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::WndwsClient.Properties.Settings.Default.ExamDBConnectionString;
+            this._connection.ConnectionString = global::WndwsClient.Properties.Settings.Default.TestDBConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -822,45 +899,16 @@ namespace WndwsClient.ExamDBDataSetTableAdapters {
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "dbo.spGetFullMessage";
-            this._commandCollection[0].CommandType = global::System.Data.CommandType.StoredProcedure;
-            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Username", global::System.Data.SqlDbType.VarChar, 64, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Headline", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Message", global::System.Data.SqlDbType.VarChar, 64, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MessaegCreated", global::System.Data.SqlDbType.SmallDateTime, 4, global::System.Data.ParameterDirection.Input, 16, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].CommandText = "SELECT MessageID, Headline, Message, MessageCreated, UserID FROM dbo.tbl_Message";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(ExamDBDataSet.spGetFullMessageDataTable dataTable, string Username, string Headline, string Message, global::System.Nullable<global::System.DateTime> MessaegCreated) {
+        public virtual int Fill(TestDBDataSet1.tbl_MessageDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            if ((Username == null)) {
-                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[1].Value = ((string)(Username));
-            }
-            if ((Headline == null)) {
-                this.Adapter.SelectCommand.Parameters[2].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[2].Value = ((string)(Headline));
-            }
-            if ((Message == null)) {
-                this.Adapter.SelectCommand.Parameters[3].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[3].Value = ((string)(Message));
-            }
-            if ((MessaegCreated.HasValue == true)) {
-                this.Adapter.SelectCommand.Parameters[4].Value = ((System.DateTime)(MessaegCreated.Value));
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[4].Value = global::System.DBNull.Value;
-            }
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
             }
@@ -872,35 +920,194 @@ namespace WndwsClient.ExamDBDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual ExamDBDataSet.spGetFullMessageDataTable GetData(string Username, string Headline, string Message, global::System.Nullable<global::System.DateTime> MessaegCreated) {
+        public virtual TestDBDataSet1.tbl_MessageDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            if ((Username == null)) {
-                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[1].Value = ((string)(Username));
-            }
-            if ((Headline == null)) {
-                this.Adapter.SelectCommand.Parameters[2].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[2].Value = ((string)(Headline));
-            }
-            if ((Message == null)) {
-                this.Adapter.SelectCommand.Parameters[3].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[3].Value = ((string)(Message));
-            }
-            if ((MessaegCreated.HasValue == true)) {
-                this.Adapter.SelectCommand.Parameters[4].Value = ((System.DateTime)(MessaegCreated.Value));
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[4].Value = global::System.DBNull.Value;
-            }
-            ExamDBDataSet.spGetFullMessageDataTable dataTable = new ExamDBDataSet.spGetFullMessageDataTable();
+            TestDBDataSet1.tbl_MessageDataTable dataTable = new TestDBDataSet1.tbl_MessageDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(TestDBDataSet1.tbl_MessageDataTable dataTable) {
+            return this.Adapter.Update(dataTable);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(TestDBDataSet1 dataSet) {
+            return this.Adapter.Update(dataSet, "tbl_Message");
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(global::System.Data.DataRow dataRow) {
+            return this.Adapter.Update(new global::System.Data.DataRow[] {
+                        dataRow});
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(global::System.Data.DataRow[] dataRows) {
+            return this.Adapter.Update(dataRows);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
+        public virtual int Delete(int Original_MessageID, string Original_Headline, string Original_Message, System.DateTime Original_MessageCreated, global::System.Nullable<int> Original_UserID) {
+            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_MessageID));
+            if ((Original_Headline == null)) {
+                throw new global::System.ArgumentNullException("Original_Headline");
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((string)(Original_Headline));
+            }
+            if ((Original_Message == null)) {
+                throw new global::System.ArgumentNullException("Original_Message");
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_Message));
+            }
+            this.Adapter.DeleteCommand.Parameters[3].Value = ((System.DateTime)(Original_MessageCreated));
+            if ((Original_UserID.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[5].Value = ((int)(Original_UserID.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[5].Value = global::System.DBNull.Value;
+            }
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
+            if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.DeleteCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.DeleteCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.DeleteCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
+        public virtual int Insert(string Headline, string Message, System.DateTime MessageCreated, global::System.Nullable<int> UserID) {
+            if ((Headline == null)) {
+                throw new global::System.ArgumentNullException("Headline");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(Headline));
+            }
+            if ((Message == null)) {
+                throw new global::System.ArgumentNullException("Message");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(Message));
+            }
+            this.Adapter.InsertCommand.Parameters[2].Value = ((System.DateTime)(MessageCreated));
+            if ((UserID.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[3].Value = ((int)(UserID.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
+            if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.InsertCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.InsertCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.InsertCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
+        public virtual int Update(string Headline, string Message, System.DateTime MessageCreated, global::System.Nullable<int> UserID, int Original_MessageID, string Original_Headline, string Original_Message, System.DateTime Original_MessageCreated, global::System.Nullable<int> Original_UserID, int MessageID) {
+            if ((Headline == null)) {
+                throw new global::System.ArgumentNullException("Headline");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(Headline));
+            }
+            if ((Message == null)) {
+                throw new global::System.ArgumentNullException("Message");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(Message));
+            }
+            this.Adapter.UpdateCommand.Parameters[2].Value = ((System.DateTime)(MessageCreated));
+            if ((UserID.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(UserID.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(Original_MessageID));
+            if ((Original_Headline == null)) {
+                throw new global::System.ArgumentNullException("Original_Headline");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(Original_Headline));
+            }
+            if ((Original_Message == null)) {
+                throw new global::System.ArgumentNullException("Original_Message");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(Original_Message));
+            }
+            this.Adapter.UpdateCommand.Parameters[7].Value = ((System.DateTime)(Original_MessageCreated));
+            if ((Original_UserID.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((int)(Original_UserID.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[9].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.UpdateCommand.Parameters[10].Value = ((int)(MessageID));
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
+            if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.UpdateCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.UpdateCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.UpdateCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
+        public virtual int Update(string Headline, string Message, System.DateTime MessageCreated, global::System.Nullable<int> UserID, int Original_MessageID, string Original_Headline, string Original_Message, System.DateTime Original_MessageCreated, global::System.Nullable<int> Original_UserID) {
+            return this.Update(Headline, Message, MessageCreated, UserID, Original_MessageID, Original_Headline, Original_Message, Original_MessageCreated, Original_UserID, Original_MessageID);
         }
     }
     
@@ -916,6 +1123,8 @@ namespace WndwsClient.ExamDBDataSetTableAdapters {
         
         private UpdateOrderOption _updateOrder;
         
+        private tbl_MessageTableAdapter _tbl_MessageTableAdapter;
+        
         private bool _backupDataSetBeforeUpdate;
         
         private global::System.Data.IDbConnection _connection;
@@ -928,6 +1137,20 @@ namespace WndwsClient.ExamDBDataSetTableAdapters {
             }
             set {
                 this._updateOrder = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
+            "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
+            "a", "System.Drawing.Design.UITypeEditor")]
+        public tbl_MessageTableAdapter tbl_MessageTableAdapter {
+            get {
+                return this._tbl_MessageTableAdapter;
+            }
+            set {
+                this._tbl_MessageTableAdapter = value;
             }
         }
         
@@ -950,6 +1173,10 @@ namespace WndwsClient.ExamDBDataSetTableAdapters {
                 if ((this._connection != null)) {
                     return this._connection;
                 }
+                if (((this._tbl_MessageTableAdapter != null) 
+                            && (this._tbl_MessageTableAdapter.Connection != null))) {
+                    return this._tbl_MessageTableAdapter.Connection;
+                }
                 return null;
             }
             set {
@@ -963,6 +1190,9 @@ namespace WndwsClient.ExamDBDataSetTableAdapters {
         public int TableAdapterInstanceCount {
             get {
                 int count = 0;
+                if ((this._tbl_MessageTableAdapter != null)) {
+                    count = (count + 1);
+                }
                 return count;
             }
         }
@@ -972,8 +1202,17 @@ namespace WndwsClient.ExamDBDataSetTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private int UpdateUpdatedRows(ExamDBDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(TestDBDataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
+            if ((this._tbl_MessageTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.tbl_Message.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._tbl_MessageTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
             return result;
         }
         
@@ -982,8 +1221,16 @@ namespace WndwsClient.ExamDBDataSetTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private int UpdateInsertedRows(ExamDBDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(TestDBDataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
+            if ((this._tbl_MessageTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.tbl_Message.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._tbl_MessageTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
             return result;
         }
         
@@ -992,8 +1239,16 @@ namespace WndwsClient.ExamDBDataSetTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private int UpdateDeletedRows(ExamDBDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(TestDBDataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
+            if ((this._tbl_MessageTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.tbl_Message.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._tbl_MessageTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
             return result;
         }
         
@@ -1026,12 +1281,17 @@ namespace WndwsClient.ExamDBDataSetTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public virtual int UpdateAll(ExamDBDataSet dataSet) {
+        public virtual int UpdateAll(TestDBDataSet1 dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }
             if ((dataSet.HasChanges() == false)) {
                 return 0;
+            }
+            if (((this._tbl_MessageTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._tbl_MessageTableAdapter.Connection) == false))) {
+                throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
+                        "tring.");
             }
             global::System.Data.IDbConnection workConnection = this.Connection;
             if ((workConnection == null)) {
@@ -1065,6 +1325,15 @@ namespace WndwsClient.ExamDBDataSetTableAdapters {
             try {
                 // ---- Prepare for update -----------
                 //
+                if ((this._tbl_MessageTableAdapter != null)) {
+                    revertConnections.Add(this._tbl_MessageTableAdapter, this._tbl_MessageTableAdapter.Connection);
+                    this._tbl_MessageTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._tbl_MessageTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._tbl_MessageTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._tbl_MessageTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._tbl_MessageTableAdapter.Adapter);
+                    }
+                }
                 // 
                 //---- Perform updates -----------
                 //
@@ -1122,6 +1391,10 @@ namespace WndwsClient.ExamDBDataSetTableAdapters {
             finally {
                 if (workConnOpened) {
                     workConnection.Close();
+                }
+                if ((this._tbl_MessageTableAdapter != null)) {
+                    this._tbl_MessageTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._tbl_MessageTableAdapter]));
+                    this._tbl_MessageTableAdapter.Transaction = null;
                 }
                 if ((0 < adaptersWithAcceptChangesDuringUpdate.Count)) {
                     global::System.Data.Common.DataAdapter[] adapters = new System.Data.Common.DataAdapter[adaptersWithAcceptChangesDuringUpdate.Count];

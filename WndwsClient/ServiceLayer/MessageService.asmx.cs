@@ -6,6 +6,8 @@ using System.Web.Services;
 using System.Data.SqlClient;
 using LibraryClass;
 using System.Data;
+using System.Net.Mail;
+using System.Net;
 
 namespace ServiceLayer
 {
@@ -33,26 +35,44 @@ namespace ServiceLayer
         [WebMethod]
         public void checkUserName(string pUsername)
         {
-            SqlConnection conn = ConnectClass.GetConnection();
-            string queryString = "spCheckName";
-            SqlCommand command = new SqlCommand(queryString, conn);
-            command.CommandType = CommandType.StoredProcedure;
-          
-            SqlParameter parameter = new SqlParameter();
-            parameter.ParameterName = "pUsername";
-            parameter.SqlDbType = SqlDbType.VarChar;
-            parameter.Direction = ParameterDirection.Input;
-            parameter.Value = pUsername;
-            command.Parameters.Add(parameter);
-            conn.Open();
-            SqlDataReader rdr = command.ExecuteReader();
+        }
+        [WebMethod]
+        public static void sendEmail()
+        {
+            //MailMessage m = new MailMessage();
+            //SmtpClient sc = new SmtpClient();
+            //m.From = new MailAddress("nicolajstr@gmail.com", "Nicolaj Stær");
+            //m.To.Add(new MailAddress("marcusulsoe@gmail.com", "Marcus Ulsø"));
 
-            while (rdr.Read())
+            //m.Subject = "Test";
+            //m.Body = "This is a test mail but you forgot a password anyway UNDERTALE HILDA";
+        }
+        [WebMethod]
+        public static void sendMail()
+        {
+            var fromAddress = new MailAddress("nicolajstr@gmail.com", "Nicolaj Stær");
+            var toAddress = new MailAddress("marcusulsoe@gmail.com", "Marcus Ulsø");
+
+            const string fromPassword = "Synopsisklamp22";
+            const string subject = "Hello World";
+            const string body = "This is a test message to your e-amil";
+
+            var smtp = new SmtpClient
             {
-                if (pUsername == rdr["Username"].ToString())
-                {
-                    NameTaken = true;
-                }
+                Host = "smtp.gmail.com",
+                Port = 587,
+                EnableSsl = true,
+                DeliveryMethod = SmtpDeliveryMethod.Network,
+                UseDefaultCredentials = false,
+                Credentials = new NetworkCredential(fromAddress.Address, fromPassword)
+            };
+            using (var message = new MailMessage(fromAddress, toAddress)
+            {
+                Subject = subject,
+                Body = body
+            })
+            {
+                smtp.Send(message);
             }
         }
     }

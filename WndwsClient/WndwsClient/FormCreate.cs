@@ -36,15 +36,22 @@ namespace WndwsClient
             ConnectClass.checkUserName(textBoxName.Text);
             try
             {
-                if ((textBoxPassword.Text == textBoxCPassword.Text) && ConnectClass.NameTaken == false)
+                if ((textBoxPassword.Text == textBoxCPassword.Text) && ConnectClass.NameTaken == false && (ConnectClass.isValid(textBoxEmail.Text)))
                 {
-                    ConnectClass.AddUser(textBoxName.Text, textBoxPassword.Text, textBoxCountry.Text, Convert.ToInt32(textBoxPhone.Text), Convert.ToInt32("0"));
-                    label1.Visible = true; label1.Text = "Success";
+                    ConnectClass.AddUser(textBoxName.Text, textBoxPassword.Text, textBoxEmail.Text, textBoxCountry.Text, Convert.ToInt32(textBoxPhone.Text), Convert.ToInt32("0"));
+                   // label1.Visible = true; label1.Text = "Success";
+                    System.Threading.Thread t1 = new System.Threading.Thread(new System.Threading.ThreadStart(ThreadProc));
+                    t1.Start();
+                    this.Close();
                 }
                 else if (ConnectClass.NameTaken == true)
                 {
                     label1.Visible = true;
                     label1.Text = "Name already exists";
+                }
+                else if(ConnectClass.isValid(textBoxEmail.Text) == false)
+                {
+                    label1.Text = "Invalid email"; label1.Visible = true;
                 }
                 else
                 {

@@ -9,7 +9,7 @@
 <body>
     <form id="form1" runat="server">
     <div style="height: 213px">
-        &nbsp;&nbsp;<table><tr><td><asp:GridView ID="GridView1" runat="server" AllowSorting="True" AutoGenerateColumns="False" DataSourceID="SqlDataSource4" CellPadding="4" ForeColor="#333333" GridLines="None" DataKeyNames="UserID">
+        &nbsp;&nbsp;<table><tr><td><asp:GridView ID="GridView1" runat="server" AllowSorting="True" AutoGenerateColumns="False" DataSourceID="SqlDataSource4" CellPadding="4" ForeColor="#333333" GridLines="None" DataKeyNames="UserID" OnRowDeleted="GridView1_RowDeleted1">
             <AlternatingRowStyle BackColor="White" />
             <Columns>
                 <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" />

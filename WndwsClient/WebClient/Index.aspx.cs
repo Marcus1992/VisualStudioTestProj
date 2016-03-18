@@ -5,6 +5,8 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using LibraryClass;
+using System.Net.Mail;
+using System.Net;
 
 namespace WebClient
 {
@@ -25,6 +27,7 @@ namespace WebClient
         {
             ConnectClass.UseType = 0;
             ConnectClass.checkLogin(TextBoxUsername.Text, TextBoxPassword.Text);
+            ConnectClass.GetUserID(TextBoxUsername.Text);
             ConnectClass.GetUserType(TextBoxUsername.Text);
             if (ConnectClass.Access == true)
             {
@@ -35,6 +38,11 @@ namespace WebClient
                 TextBoxUsername.Text = "";
                 TextBoxPassword.Text = "";
             }
+        }
+
+        protected void Button3_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("passwordRecovery.aspx");
         }
     }
 }

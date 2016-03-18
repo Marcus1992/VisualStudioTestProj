@@ -37,6 +37,7 @@
             this.textBoxUsername = new System.Windows.Forms.TextBox();
             this.textBoxPassword = new System.Windows.Forms.TextBox();
             this.buttonLogin = new System.Windows.Forms.Button();
+            this.buttonForgot = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // labelLogin
@@ -118,11 +119,22 @@
             this.buttonLogin.UseVisualStyleBackColor = true;
             this.buttonLogin.Click += new System.EventHandler(this.buttonLogin_Click);
             // 
+            // buttonForgot
+            // 
+            this.buttonForgot.Location = new System.Drawing.Point(213, 188);
+            this.buttonForgot.Name = "buttonForgot";
+            this.buttonForgot.Size = new System.Drawing.Size(102, 23);
+            this.buttonForgot.TabIndex = 9;
+            this.buttonForgot.Text = "Forgot password";
+            this.buttonForgot.UseVisualStyleBackColor = true;
+            this.buttonForgot.Click += new System.EventHandler(this.buttonForgot_Click);
+            // 
             // FormStart
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(406, 217);
+            this.Controls.Add(this.buttonForgot);
             this.Controls.Add(this.buttonLogin);
             this.Controls.Add(this.textBoxPassword);
             this.Controls.Add(this.textBoxUsername);
@@ -150,5 +162,6 @@
         private System.Windows.Forms.TextBox textBoxUsername;
         private System.Windows.Forms.TextBox textBoxPassword;
         private System.Windows.Forms.Button buttonLogin;
+        private System.Windows.Forms.Button buttonForgot;
     }
 }

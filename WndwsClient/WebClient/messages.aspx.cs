@@ -12,6 +12,8 @@ namespace WebClient
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            string sc = String.Format("Welcome {0}", ConnectClass.passU);
+            Label1.Text = sc;
             if (ConnectClass.UseType == 1)
             {
                 ButtonEdit.Enabled = true;
@@ -35,6 +37,11 @@ namespace WebClient
         protected void ButtonEdit_Click(object sender, EventArgs e)
         {
             Response.Redirect("Admin.aspx");
+        }
+
+        protected void Button3_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("manageAccount.aspx");
         }
     }
 }

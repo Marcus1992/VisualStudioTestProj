@@ -29,11 +29,15 @@ namespace WndwsClient
             if(textBoxHeadline.Text == "" ||richTextBoxMessage.Text == "")
             {
                 labelFeedback.Visible = true;
+                labelFeedback.Text = "The textboxes are empty.";
             }
             else
             {
                 ConnectClass.AddMessage(textBoxHeadline.Text, richTextBoxMessage.Text);
-                labelFeedback.Visible = false;
+                labelFeedback.Text = "Message inserted";
+                labelFeedback.Visible = true;
+                textBoxHeadline.Text = string.Empty;
+                richTextBoxMessage.Text = string.Empty;
             }
         }
     

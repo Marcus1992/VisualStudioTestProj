@@ -26,10 +26,12 @@ namespace WndwsClient
 
         private void FormAdmin_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'examDBDataSet4.tbl_Users' table. You can move, or remove it, as needed.
-            this.tbl_UsersTableAdapter.Fill(this.examDBDataSet4.tbl_Users);
-            // TODO: This line of code loads data into the 'examDBDataSet3.tbl_Message' table. You can move, or remove it, as needed.
-            this.tbl_MessageTableAdapter.Fill(this.examDBDataSet3.tbl_Message);
+            // TODO: This line of code loads data into the 'testDBDataSet1.tbl_Message' table. You can move, or remove it, as needed.
+            this.tbl_MessageTableAdapter.Fill(this.testDBDataSet1.tbl_Message);
+            // TODO: This line of code loads data into the 'testDBDataSet.tbl_Users' table. You can move, or remove it, as needed.
+            this.tbl_UsersTableAdapter.Fill(this.testDBDataSet.tbl_Users);
+
+
         }
 
         private void buttonBack_Click(object sender, EventArgs e)
@@ -41,10 +43,10 @@ namespace WndwsClient
 
         private void buttonSave_Click(object sender, EventArgs e)
         {
-            if (dataGridViewMessages.SelectedCells[0].ColumnIndex == 2)
+          //  if (dataGridViewMessages.SelectedCells[0].ColumnIndex == 2)
             {
-                dataGridViewMessages.SelectedCells[0].Value = textBox1.Text;
-                this.tbl_MessageTableAdapter.Update(this.examDBDataSet3.tbl_Message);
+                //dataGridViewMessages.SelectedCells[0].Value = textBox1.Text;
+                //this.tbl_MessageTableAdapter.Update(this.examDBDataSet3.tbl_Message);
             }
         }
     }

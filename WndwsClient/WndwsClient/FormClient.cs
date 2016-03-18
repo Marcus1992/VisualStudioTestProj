@@ -16,6 +16,7 @@ namespace WndwsClient
         public FormClient()
         {
             InitializeComponent();
+            string sc =String.Format("Welcome {0}", ConnectClass.passU);
             if (ConnectClass.UseType == 1)
             {
                 buttonEdit.Enabled = true;
@@ -24,11 +25,12 @@ namespace WndwsClient
             {
                 buttonEdit.Enabled = false;
             }
-            DataGridViewColumn column1 = dataGridView1.Columns[1];
-            DataGridViewColumn column2 = dataGridView1.Columns[0];
-            column1.Width = 300;
-            column2.Width = 200;
-            labelWelcome.Text = "Welcome, {0}";
+            DataGridViewColumn column1 = dataGridView1.Columns[2];
+            DataGridViewColumn column2 = dataGridView1.Columns[1];
+            column1.Width = 200;
+            column2.Width = 100;
+
+            labelWelcome.Text = sc;
         }
 
         public static void ThreadProc()
@@ -44,6 +46,11 @@ namespace WndwsClient
         public static void ThreadProc3()
         {
             Application.Run(new FormAdmin());
+        }
+
+        public static void ThreadProc4()
+        {
+            Application.Run(new manageAccount());
         }
 
         private void buttonBack_Click(object sender, EventArgs e)
@@ -62,13 +69,24 @@ namespace WndwsClient
 
         private void FormClient_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'examDBDataSet1.tbl_Message' table. You can move, or remove it, as needed.
-            this.tbl_MessageTableAdapter.Fill(this.examDBDataSet1.tbl_Message);
+
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             System.Threading.Thread t1 = new System.Threading.Thread(new System.Threading.ThreadStart(ThreadProc3));
+            t1.Start();
+            this.Close();
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void buttonManageAccount_Click(object sender, EventArgs e)
+        {
+            System.Threading.Thread t1 = new System.Threading.Thread(new System.Threading.ThreadStart(ThreadProc4));
             t1.Start();
             this.Close();
         }

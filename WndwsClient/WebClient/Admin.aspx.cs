@@ -27,5 +27,16 @@ namespace WebClient
 
         }
 
+        protected void GridView1_RowDeleted1(object sender, GridViewDeletedEventArgs e)
+        {
+            if(e.Exception == null)
+            {
+
+            }
+            else
+            {
+                e.ExceptionHandled = true;
+            }
+        }
     }
 }

@@ -20,6 +20,9 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <asp:Button ID="ButtonBack" runat="server" OnClick="Button2_Click" Text="Back" />
         <br />
+        <asp:Label ID="LabelEmail" runat="server" Text="Email"></asp:Label>
+        <br />
+        <asp:TextBox ID="TextBoxEmail" runat="server" Width="161px"></asp:TextBox>
         <br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Password&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Confirm Password<br />
         <asp:TextBox ID="TextBoxPassword" runat="server"></asp:TextBox>
@@ -32,7 +35,6 @@
         <br />
         <br />
         <asp:Label ID="LabelFeedBack" runat="server" Text="User"></asp:Label>
-    
     </div>
     </form>
 </body>
